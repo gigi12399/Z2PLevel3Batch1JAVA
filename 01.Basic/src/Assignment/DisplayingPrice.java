@@ -1,6 +1,5 @@
 package Assignment;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class DisplayingPrice {
@@ -85,7 +84,6 @@ public class DisplayingPrice {
 			int word = obj.sc.nextInt();
 			copy = word;
 		}while(copy == 1);
-		
 		}
 
 }
