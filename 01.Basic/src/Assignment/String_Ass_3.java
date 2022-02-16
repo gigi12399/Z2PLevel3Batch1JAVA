@@ -7,7 +7,7 @@ public class String_Ass_3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter your NRC NO.: ");
+		System.out.print("Enter your NRC NO: ");
 		String nrc = sc.nextLine();
 		
 		String[] s = nrc.split("/");
