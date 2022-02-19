@@ -22,6 +22,10 @@ public class Date_Time_ass_2 {
 		}
 		System.out.print("Please choose item's number: ");
 		this.menu_no = sc.nextInt();
+		if(menu_no > menu.length) {
+			System.out.println("\n" + "Your menu's number does not exit." + "\n" + "Choose again from given number: ");
+			
+		}
 	}
 	
 	void townshipDisplay(Scanner sc) {
@@ -44,7 +48,7 @@ public class Date_Time_ass_2 {
 	
 	void orderDisplay(Scanner sc,LocalTime current_time,LocalDate current_date) {
 		if(order_no == 1) {
-			LocalTime arrival_time = current_time.plusMinutes(times[--township_no] + 10);
+			LocalTime arrival_time = current_time.plusMinutes(times[--township_no]);
 			System.out.println("\n" + "***** Your Order Information *****");
 			System.out.println("Item Name: " + menu[--menu_no]);
 			System.out.println("Your Address: " + townships[township_no]);
