@@ -10,7 +10,7 @@ public class String_Ass_2 {
 		String[] simple = {"am", "is", "are", "do"};
 		
 		System.out.print("Write any one sentences: ");
-		String input = sc.nextLine().toLowerCase();
+		String input = sc.nextLine();
 		if(input.contains("?")) {
 			int count = 0;
 			System.out.println("It is question sentence.");
