@@ -7,10 +7,10 @@ public class String_Ass_2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		String[] simple = {"Am", "am", "Is", "is", "Are", "are", "Do", "do"};
+		String[] simple = {"am", "is", "are", "do"};
 		
 		System.out.print("Write any one sentences: ");
-		String input = sc.nextLine();
+		String input = sc.nextLine().toLowerCase();
 		if(input.contains("?")) {
 			int count = 0;
 			System.out.println("It is question sentence.");
