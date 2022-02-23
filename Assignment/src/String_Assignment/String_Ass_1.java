@@ -1,4 +1,4 @@
-package Assignment;
+package String_Assignment;
 
 public class String_Ass_1 {
 

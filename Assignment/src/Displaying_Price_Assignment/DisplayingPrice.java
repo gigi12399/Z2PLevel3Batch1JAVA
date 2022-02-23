@@ -1,4 +1,4 @@
-package Assignment;
+package Displaying_Price_Assignment;
 
 import java.util.Scanner;
 
