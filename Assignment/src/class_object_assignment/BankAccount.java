@@ -49,6 +49,14 @@ public class BankAccount {
 		this.balance = balance;
 	}
 	
+	public BankAccount(int accountNo, String holderName, String pinNo, String password, int balance) {
+		setAccountNo(accountNo);
+		setHolderName(holderName);
+		setPinNo(pinNo);
+		setPassword(password);
+		setBalance(balance);
+	}
+
 	public int deposit(int add_amount) {
 		return balance = balance + add_amount;
 	}
