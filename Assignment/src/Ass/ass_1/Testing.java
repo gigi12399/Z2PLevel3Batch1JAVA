@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Testing {
 	public static void main(String[] args) {
-		Student[] data = new Student[2];
+		Student[] data = new Student[4];
 		
 		// initialize data
 		initializeData(data);
@@ -23,6 +23,7 @@ public class Testing {
 		
 		// find average mark
 		findAverageMark(data);
+		sc.close();
 	}
 
 	private static void findAverageMark(Student[] data) {
@@ -36,7 +37,13 @@ public class Testing {
 	}
 
 	private static void searchStudent(int id, Student[] data) {
-		// search
+		for(var std : data) {
+			if(id == std.getStudentId()) {
+				std.display();
+			}else {
+				System.out.println("Student id-" + id + " is not found!");
+			}
+		}
 		
 	}
 
@@ -59,9 +66,8 @@ public class Testing {
 				System.out.print("Enter mark: ");
 				data[x].setMark(Integer.parseInt(sc.nextLine()));
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
+		}catch(Exception e) {
+			System.err.print(e.getMessage());
 		}
-		
 	}
 }
