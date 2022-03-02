@@ -1,6 +1,6 @@
-package Ass.ass_1;
+package OOP_Assignment;
 
-public class Student {
+public class Ass1_Student {
 	private int studentId;
 	private String name;
 	private int mark;
@@ -22,7 +22,7 @@ public class Student {
 	public void setMark(int mark) {
 		this.mark = mark;
 	}
-	public Student(int studentId, String name, int mark) {
+	public Ass1_Student(int studentId, String name, int mark) {
 		super();
 		this.studentId = studentId;
 		this.name = name;
