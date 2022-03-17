@@ -4,13 +4,17 @@ import java.util.List;
 
 public class Filtering {
 	public static void main(String[] args) {
-//		List<Users> user = List.of(
-//				new user("Kyaw Kyaw",9800,"Yangon"),
-//				new user("Aung Aung",6000,"Mandalay"),
-//				new user("Mg Mg",10000,"Mandalay"),
-//				new user("Yuri",6000,"Yangon"),
-//				new user("Jeon",7800,"Monywa")
-//				);
+		List<Users> users = List.of(
+				new Users("Kyaw Kyaw", "Staff"),
+				new Users("Aung Aung", "Staff"),
+				new Users("Maung Maung","Staff"),
+				new Users("Yuri", "Customer"),
+				new Users("Jeon", "Customer")
+				);
+		users.stream()
+			//.filter(u -> u.getRole().equalsIgnoreCase("Staff"))
+			.filter(Users::IsStaff) // return user object
+			.forEach(u -> System.out.println(u.getName() + ", " + u.getRole()));
 				
 	}
 }

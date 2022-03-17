@@ -1,0 +1,3 @@
+Bufferwriter is the simplest way of writing test data into file.It buffers characters to imporve performance.
+As it buffers before writing.
+So it results in less IO operation.

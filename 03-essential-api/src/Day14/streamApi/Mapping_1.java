@@ -15,7 +15,7 @@ public class Mapping_1 {
 				);
 		List<String> distinctCities = empList.stream()
 											.map(emp -> emp.getCity())
-											.distinct()
+											.distinct() // unique
 											.collect(Collectors.toList());
 		System.out.println(distinctCities);
 		
