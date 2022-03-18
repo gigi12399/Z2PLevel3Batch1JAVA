@@ -1,9 +1,8 @@
-package Day18.bookmanagenmentsystem;
+package Day18.bookmanagementsystem;
 
-public class Author {
+public class Category {
 	private int id;
 	private String name;
-	private String city;
 	public int getId() {
 		return id;
 	}
@@ -15,12 +14,6 @@ public class Author {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getCountry() {
-		return city;
-	}
-	public void setCountry(String city) {
-		this.city = city;
 	}
 	
 }

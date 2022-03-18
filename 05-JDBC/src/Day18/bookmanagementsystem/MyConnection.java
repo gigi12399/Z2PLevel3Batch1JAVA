@@ -1,4 +1,4 @@
-package Day18.bookmanagenmentsystem;
+package Day18.bookmanagementsystem;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
