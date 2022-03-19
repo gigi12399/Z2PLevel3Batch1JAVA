@@ -1,6 +1,7 @@
 package Day18.bookmanagementsystem;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -106,8 +107,34 @@ public class Bookmanagement {
 	}
 
 	private static void viewByCategory() {
+		String c_name;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter Category: ");
+		c_name = sc.nextLine();
+		
+		Category cat = DatabaseHandler.findCategoryByName(c_name);
 		
 		
+		if(cat == null) { // category does not exist
+			System.out.println("This is no " + c_name + " Category");
+		}else { // category exist
+			List<Book> list = DatabaseHandler.findBookByCategory(cat.getId());
+			
+			if(list.size() == 0) { // no book
+				System.out.println("There is no book in this category.");
+			}else{ // exist books
+				System.out.println("Code\tTitle\tPublish Date\tAuthor Name");
+				System.out.println("-----------------------------------------");
+				list.forEach(book -> {
+					System.out.print(book.getCode() + "\t");
+					System.out.print(book.getTitle() + "\t");
+					System.out.print(book.getPublish_date() + "\t");
+					System.out.print(book.getAuthor().getName() + "\n");
+				});
+			}
+		}
+		sc.close();
 	}
 
 	private static void viewAllBooks() {

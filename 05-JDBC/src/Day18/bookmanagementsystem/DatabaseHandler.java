@@ -144,5 +144,53 @@ public class DatabaseHandler {
 		
 		return list;
 	}
+
+	public static Category findCategoryByName(String c_name) {
+		Category cat = null;
+		
+		try(Connection con = MyConnection.createConnection()) {
+			String query = "SELECT * FROM categories WHERE name = ?";
+			PreparedStatement pstm = con.prepareStatement(query);
+			pstm.setString(1, c_name);
+			ResultSet rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				cat = new Category();
+				cat.setId(rs.getInt("category_id"));
+				cat.setName(rs.getString("name"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cat;
+	}
+
+	public static List<Book> findBookByCategory(int id) {
+		List<Book> list = new ArrayList<>();
+		
+		try(Connection con = MyConnection.createConnection()) {
+			String query = "SELECT b.*,a.name FROM books b,authors a WHERE category_id = ? AND b.author_id = a.author_id";
+			PreparedStatement pstm = con.prepareStatement(query);
+			pstm.setInt(1, id);
+			ResultSet rs = pstm.executeQuery();
+			while(rs.next()) {
+				Book book = new Book();
+				book.setCode(rs.getInt("code"));
+				book.setTitle(rs.getString("title"));
+				book.setPublish_date(LocalDate.parse(rs.getString("publish_date")));
+				
+				Author author = new Author();
+				author.setName(rs.getString("name"));
+				
+				book.setAuthor(author);
+				list.add(book);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
 	
 }
