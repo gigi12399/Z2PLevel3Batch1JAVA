@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.xml.crypto.Data;
+
 public class Bookmanagement {
 
 	public static void main(String[] args) {
@@ -42,9 +44,32 @@ public class Bookmanagement {
 		book.setTitle(sc.nextLine());
 		System.out.print("Publish Date(yyyy-MM-dd): ");
 		book.setPublish_date(LocalDate.parse(sc.nextLine()));
-		System.out.print("Author Name: ");
 		
 		System.out.print("Category Name:");
+		String catName = sc.nextLine();
+		Category cat = DatabaseHandler.verifyCategory(catName);
+		book.setCategory(cat);
+		
+		System.out.print("Author Name: ");
+		String authorName = sc.nextLine();
+		Author author = DatabaseHandler.checkAuthorName(authorName);
+		if(author.getId() == 0) { // new author
+			System.out.println("This is new author");
+			System.out.print("Enter country name: ");
+			author.setCountry(sc.nextLine());
+			author.setName(authorName);
+			
+			Author newAuthor = DatabaseHandler.addNewAuthor(author);
+			book.setAuthor(newAuthor);
+		}else { // already exist
+			book.setAuthor(author);
+		}
+		
+		boolean result = DatabaseHandler.addNewBook(book);
+		if(result)
+			System.out.println("A new book is inserted");
+		else
+			System.out.println("Somthing is wrong.Please try again!");
 		
 		sc.close();
 		
