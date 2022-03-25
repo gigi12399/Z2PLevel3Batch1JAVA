@@ -1,5 +1,6 @@
 package Day18.bookmanagementsystem;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import javax.xml.crypto.Data;
 
 public class Bookmanagement {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		String input = """
 				1. View Authors
 				2. View Books
@@ -34,7 +35,7 @@ public class Bookmanagement {
 
 	}
 
-	private static void addNewBook() {
+	private static void addNewBook() throws SQLException {
 		Book book = new Book();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Book Information");
@@ -57,13 +58,8 @@ public class Bookmanagement {
 			System.out.println("This is new author");
 			System.out.print("Enter country name: ");
 			author.setCountry(sc.nextLine());
-			author.setName(authorName);
-			
-			Author newAuthor = DatabaseHandler.addNewAuthor(author);
-			book.setAuthor(newAuthor);
-		}else { // already exist
-			book.setAuthor(author);
 		}
+		book.setAuthor(author);
 		
 		boolean result = DatabaseHandler.addNewBook(book);
 		if(result)
