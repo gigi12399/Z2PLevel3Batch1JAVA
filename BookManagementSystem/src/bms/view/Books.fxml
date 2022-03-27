@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bms.controller.BookController">
+   <children>
+      <Button layoutX="202.0" layoutY="98.0" mnemonicParsing="false" onAction="#btn_addBook_click" prefHeight="25.0" prefWidth="196.0" text="Add Book">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="202.0" layoutY="169.0" mnemonicParsing="false" onAction="#btn_editBook_click" prefHeight="25.0" prefWidth="196.0" text="Edit Book">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="202.0" layoutY="242.0" mnemonicParsing="false" onAction="#btn_viewBook_click" prefHeight="25.0" prefWidth="196.0" text="View Book">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="202.0" layoutY="313.0" mnemonicParsing="false" onAction="#btn_deleteBook_click" prefHeight="25.0" prefWidth="196.0" text="Delete Book">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="431.0" layoutY="407.0" mnemonicParsing="false" onAction="#btn_home_click" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: #f00;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="bms.controller.MainController">
+   <children>
+      <Pane layoutX="74.0" layoutY="44.0" onMouseClicked="#book_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="70.0" layoutY="160.0" text="Books" textFill="#376fe8">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="137.0" fitWidth="138.0" layoutX="23.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/book.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="322.0" layoutY="44.0" onMouseClicked="#author_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="70.0" layoutY="160.0" text="Authors" textFill="#376fe8">
+               <font>
+                  <Font name="Arial Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="149.0" fitWidth="200.0" layoutX="27.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/author.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="200.0" layoutY="261.0" onMouseClicked="#category_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="56.0" layoutY="160.0" text="Category" textFill="#376fe8">
+               <font>
+                  <Font name="Arial Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="137.0" fitWidth="126.0" layoutX="35.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/category.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>
