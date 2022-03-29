@@ -114,7 +114,7 @@ public class Assignment_2 {
 		Map<String, List<Employee>> sameDepartment = employee.stream()
 				.collect(Collectors.groupingBy(Employee::getDepartment));
 		
-		System.out.println("List of employee who got the same salary:");
+		System.out.println("List of employee names in each department:");
 		sameDepartment.forEach((k,v) -> {
 			System.out.println("Department: " + k);
 			v.forEach(emp -> System.out.println(emp.getName() + "\t"));
