@@ -47,5 +47,11 @@ public class Employee {
 	public void setBirthday(CharSequence birthday) {
 		this.birthday = LocalDate.parse(birthday);
 	}
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", city=" + city + ", department=" + department + ", salary=" + salary
+				+ ", birthday=" + birthday + "]";
+	}
+	
 	
 }

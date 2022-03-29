@@ -29,8 +29,8 @@ public class BookController {
 		BMS_Main.changeScene("view/EditBook.fxml");
 	}
 	@FXML
-	public void btn_viewBook_click() {
-		
+	public void btn_viewBook_click() throws IOException {
+		BMS_Main.changeScene("view/ViewBook.fxml");
 	}
 	@FXML
 	public void btn_deleteBook_click() {

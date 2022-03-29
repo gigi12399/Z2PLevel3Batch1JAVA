@@ -23,7 +23,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="202.0" layoutY="242.0" mnemonicParsing="false" onAction="#btn_viewBook_click" prefHeight="25.0" prefWidth="196.0" text="View Book">
+      <Button layoutX="202.0" layoutY="242.0" mnemonicParsing="false" onAction="#btn_viewBook_click" prefHeight="25.0" prefWidth="196.0" text="Search Book">
          <font>
             <Font name="Arial" size="15.0" />
          </font>

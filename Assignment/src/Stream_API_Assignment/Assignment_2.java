@@ -1,17 +1,23 @@
 package Stream_API_Assignment;
 
+import static java.util.Comparator.comparingInt;
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.maxBy;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 public class Assignment_2 {
 
 	public static void main(String[] args) {
 		List<Employee> employee = new ArrayList<>();
 		
-		employee.add(new Employee("Htet Htet", "Yango", "Electronics", 900000, "1991-10-16"));
+		employee.add(new Employee("Htet Htet", "Yangon", "Electronics", 900000, "1991-10-16"));
 		employee.add(new Employee("Cherry", "Yangon", "Electronics", 820000, "1994-08-14"));
 		employee.add(new Employee("Kyaw Kyaw", "Yangon", "Electronics", 780000, "1988-09-02"));
 		employee.add(new Employee("Aung Aung", "Mandalay", "IT", 600000, "1995-01-11"));
@@ -74,23 +80,49 @@ public class Assignment_2 {
 		System.out.println("Name: " + lowestEmployee.getName() + "\t" + "City: " + lowestEmployee.getCity() + "\t" + "Department: " + lowestEmployee.getDepartment() + "\t" + "Salary: " + lowestEmployee.getSalary() + "\t" + "Birthday: " + lowestEmployee.getBirthday());
 		System.out.println("----------------------------------------");
 		
-		Map<String,List<Integer>> eachCitySalary = employee.stream()
-				.collect(Collectors.collectingAndThen(
-						Collectors.groupingBy(Employee::getCity, Collectors.mapping(Employee::getSalary, Collectors.maxBy(null)))
-										
+		Map<Object, Optional<Employee>> eachCitySalary = employee.stream()
+				.collect(Collectors.groupingBy(e -> e.getCity(),
+						Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))
 						));
 		
-		
+		System.out.println("Highest salary of employee in each city:");
+		eachCitySalary.forEach((c,s) ->{
+			System.out.println("City: " + c);
+			System.out.println("Salary: " + s); 
+		});
+		System.out.println("---------------------------------------------");
 									
 		
+		Map<Integer, List<Employee>> sameSalary = employee.stream()
+				.collect(
+						Collectors.collectingAndThen(Collectors.groupingBy(Employee::getSalary),
+							tmp -> tmp.entrySet()
+										.stream()
+										.filter(v -> v.getValue().size() > 1)
+										.collect(Collectors.toMap(v -> v.getKey(), v -> v.getValue()))
+						 )
+						);
 		
-								
-		
-		highestSalary.forEach((k,v) ->{
-			System.out.print("City: " + k);
-			v.forEach(a-> System.out.println("Salary: " + a));
-			
+		System.out.println("List of employee who got the same salary:");
+		sameSalary.forEach((k,v) -> {
+			System.out.println("Salary: " + k);
+			System.out.println("Employee: " + v);
 		});
+		System.out.println("-----------------------------------------");
+		
+		
+		Map<String, List<Employee>> sameDepartment = employee.stream()
+				.collect(Collectors.groupingBy(Employee::getDepartment));
+		
+		System.out.println("List of employee who got the same salary:");
+		sameDepartment.forEach((k,v) -> {
+			System.out.println("Department: " + k);
+			v.forEach(emp -> System.out.println(emp.getName() + "\t"));
+			System.out.println();
+		});
+		System.out.println("-----------------------------------------");
+		
+		
 		
 	}
 }
