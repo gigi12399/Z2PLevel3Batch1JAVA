@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<AnchorPane prefHeight="533.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bms.controller.AuthorController">
    <children>
-      <Button layoutX="190.0" layoutY="92.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="220.0" text="Add Author">
+      <ScrollPane layoutX="42.0" layoutY="14.0" prefHeight="243.0" prefWidth="517.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tbl_author" prefHeight="243.0" prefWidth="517.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="99.0" text="Author ID" />
+                      <TableColumn fx:id="col_name" prefWidth="217.0" text="Name" />
+                        <TableColumn fx:id="col_country" prefWidth="200.0" text="Country" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="127.0" layoutY="288.0" text="Author ID">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="190.0" layoutY="162.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="220.0" text="Edit Author">
+      </Label>
+      <TextField fx:id="txt_id" editable="false" layoutX="284.0" layoutY="284.0" prefHeight="25.0" prefWidth="222.0" />
+      <Label layoutX="127.0" layoutY="335.0" text="Author Name">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="190.0" layoutY="231.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="220.0" text="View Author">
+      </Label>
+      <TextField fx:id="txt_name" layoutX="284.0" layoutY="331.0" prefHeight="25.0" prefWidth="222.0" promptText="Name" />
+      <Label layoutX="126.0" layoutY="383.0" text="Country">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="190.0" layoutY="300.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="220.0" text="Delete Author">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
+      </Label>
+      <TextField fx:id="txt_country" layoutX="284.0" layoutY="379.0" prefHeight="25.0" prefWidth="222.0" promptText="Country" />
+      <Button layoutX="184.0" layoutY="438.0" mnemonicParsing="false" onAction="#btn_add_click" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #278616;" text="Add" textFill="WHITE" />
+      <Button layoutX="269.0" layoutY="438.0" mnemonicParsing="false" onAction="#btn_update_click" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: b57e12;" text="Update" textFill="WHITE" />
+      <Button layoutX="522.0" layoutY="485.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #142794;" text="Back" textFill="WHITE" />
+      <Button layoutX="354.0" layoutY="438.0" mnemonicParsing="false" onAction="#btn_reset_click" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #c31313;" text="Reset" textFill="WHITE" />
    </children>
 </AnchorPane>
