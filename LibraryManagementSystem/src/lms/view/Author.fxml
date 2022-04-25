@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="610.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.AuthorController">
+   <children>
+      <TableView fx:id="tbl_author" layoutX="57.0" layoutY="146.0" prefHeight="200.0" prefWidth="482.0">
+        <columns>
+          <TableColumn fx:id="tbl_author_id" prefWidth="129.0" text="Author ID" />
+          <TableColumn fx:id="tbl_name" prefWidth="185.0" text="Name" />
+            <TableColumn fx:id="tbl_country" prefWidth="167.0" text="Country" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label layoutX="127.0" layoutY="402.0" text="Author ID" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_author_id" editable="false" layoutX="257.0" layoutY="397.0" prefHeight="25.0" prefWidth="233.0" />
+      <Label layoutX="137.0" layoutY="454.0" text="Name" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="505.0" text="Country" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_country" layoutX="257.0" layoutY="500.0" prefHeight="25.0" prefWidth="233.0" promptText="Country">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_name" layoutX="257.0" layoutY="449.0" prefHeight="25.0" prefWidth="233.0" promptText="Name">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Button layoutX="126.0" layoutY="554.0" mnemonicParsing="false" onAction="#btn_add_click" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: #ad6a34;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="430.0" layoutY="554.0" mnemonicParsing="false" onAction="#btn_search_click" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #ad6a34;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="284.0" layoutY="554.0" mnemonicParsing="false" onAction="#btn_edit_click" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: #ad6a34;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="30.0" layoutY="91.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: #ad6a34;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#ad6a34" layoutX="272.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+         <font>
+            <Font name="Bauhaus 93" size="22.0" />
+         </font>
+      </Text>
+      <Line endX="267.0" layoutX="304.0" layoutY="64.0" startX="-273.0" stroke="#908686" />
+   </children>
+</AnchorPane>

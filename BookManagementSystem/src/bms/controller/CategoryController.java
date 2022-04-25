@@ -36,7 +36,7 @@ public class CategoryController implements Initializable {
     	String name = txt_name.getText();
     	DatabaseService.saveCategory(name);
     	loadCategories();
-    	resetCategory();
+    	resetCategory(); 
     }
 
     @FXML
