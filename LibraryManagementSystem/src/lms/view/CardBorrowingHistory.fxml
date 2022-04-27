@@ -11,8 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="lms.controller.CardBorrowingHistoryController">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.CardBorrowingHistoryController">
    <children>
       <Text fill="#ad6a34" layoutX="280.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card's Borrowing HIstory">
          <font>
@@ -35,7 +34,7 @@
             </DropShadow>
          </effect>
       </Button>
-      <Button layoutX="742.0" layoutY="341.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: ad6a34;" text="Home" textFill="WHITE">
+      <Button layoutX="730.0" layoutY="349.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: ad6a34;" text="Home" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="15.0" />
          </font>
@@ -52,14 +51,14 @@
       </Button>
       <TableView fx:id="tbl_card_borrow_history" layoutX="10.0" layoutY="81.0" prefHeight="246.0" prefWidth="778.0">
         <columns>
-          <TableColumn fx:id="col_id" prefWidth="48.0" text="ID" />
-          <TableColumn fx:id="col_member" prefWidth="101.0" text="Member" />
-            <TableColumn fx:id="col_book" prefWidth="119.0" text="Book" />
-            <TableColumn fx:id="col_borrow_date" prefWidth="100.0" text="Borrow Date" />
-            <TableColumn fx:id="col_due_date" prefWidth="100.0" text="Due Date" />
-            <TableColumn fx:id="col_return_date" prefWidth="103.0" text="Return Date" />
-            <TableColumn fx:id="col_librarian" prefWidth="126.0" text="Librarian" />
-            <TableColumn fx:id="col_fine_fees" text="Fine Fees" />
+          <TableColumn fx:id="col_id" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="col_member" prefWidth="117.0" text="Member" />
+            <TableColumn fx:id="col_book" prefWidth="126.0" text="Book" />
+            <TableColumn fx:id="col_borrow_date" prefWidth="109.0" text="Borrow Date" />
+            <TableColumn fx:id="col_due_date" prefWidth="108.0" text="Due Date" />
+            <TableColumn fx:id="col_return_date" prefWidth="98.0" text="Return Date" />
+            <TableColumn fx:id="col_librarian" prefWidth="116.0" text="Librarian" />
+            <TableColumn fx:id="col_fine_fees" prefWidth="58.0" text="Fine Fees" />
         </columns>
          <cursor>
             <Cursor fx:constant="HAND" />

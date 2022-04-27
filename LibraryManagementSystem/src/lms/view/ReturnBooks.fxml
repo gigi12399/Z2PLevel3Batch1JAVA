@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.ReturnBooksController">
+   <children>
+      <Text fill="#ad6a34" layoutX="347.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Books">
+         <font>
+            <Font name="Bauhaus 93" size="22.0" />
+         </font>
+      </Text>
+      <Line endX="181.0" layoutX="350.0" layoutY="67.0" startX="-72.0" stroke="#908686" />
+      <Label layoutX="183.0" layoutY="102.0" text="Enter Card ID." textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_card_id" layoutX="316.0" layoutY="98.0" prefHeight="28.0" prefWidth="188.0" promptText="Card ID" />
+      <Button focusTraversable="false" layoutX="532.0" layoutY="97.0" mnemonicParsing="false" onAction="#btn_search_click" prefHeight="28.0" prefWidth="82.0" text="Search" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="732.0" layoutY="450.0" mnemonicParsing="false" onAction="#btn_back_click" style="-fx-background-color: ad6a34;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button focusTraversable="false" layoutX="328.0" layoutY="410.0" mnemonicParsing="false" onAction="#btn_confirm_return_click" prefHeight="32.0" prefWidth="164.0" text="Confirm Return" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <TableView fx:id="tbl_return_book" layoutX="18.0" layoutY="152.0" prefHeight="246.0" prefWidth="765.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="48.0" text="ID" />
+            <TableColumn fx:id="col_member" prefWidth="101.0" text="Member" />
+            <TableColumn fx:id="col_book" prefWidth="119.0" text="Book" />
+            <TableColumn fx:id="col_borrow_date" prefWidth="100.0" text="Borrow Date" />
+            <TableColumn fx:id="col_due_date" prefWidth="100.0" text="Due Date" />
+            <TableColumn fx:id="col_return_date" prefWidth="103.0" text="Return Date" />
+            <TableColumn fx:id="col_librarian" prefWidth="116.0" text="Librarian" />
+            <TableColumn fx:id="col_fine_fees" prefWidth="77.0" text="Fine Fees" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

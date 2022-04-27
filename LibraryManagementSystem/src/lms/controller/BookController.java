@@ -180,12 +180,6 @@ public class BookController implements Initializable {
     	resetBook();
     }
     
-    @FXML
-    void btn_search_all_click(ActionEvent event) {
-    	loadBooks();
-    	resetBook();
-    }
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		loadBooks();

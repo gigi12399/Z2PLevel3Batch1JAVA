@@ -127,7 +127,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button layoutX="238.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_edit_click" style="-fx-background-color: #ad6a34;" text="Edit" textFill="WHITE">
+            <Button layoutX="300.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_edit_click" style="-fx-background-color: #ad6a34;" text="Edit" textFill="WHITE">
                <font>
                   <Font name="Bauhaus 93" size="15.0" />
                </font>
@@ -142,22 +142,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button layoutX="341.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_search_click" style="-fx-background-color: #ad6a34;" text="Search" textFill="WHITE">
-               <font>
-                  <Font name="Bauhaus 93" size="15.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow>
-                     <color>
-                        <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Button layoutX="460.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_search_all_click" style="-fx-background-color: #ad6a34;" text="Search All" textFill="WHITE">
+            <Button layoutX="452.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_search_click" style="-fx-background-color: #ad6a34;" text="Search" textFill="WHITE">
                <font>
                   <Font name="Bauhaus 93" size="15.0" />
                </font>

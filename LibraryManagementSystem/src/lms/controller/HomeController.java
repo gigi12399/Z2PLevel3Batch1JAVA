@@ -44,7 +44,7 @@ public class HomeController {
 	}
 
 	@FXML
-	void btn_return_book_click(MouseEvent event) {
-
+	void btn_return_book_click(MouseEvent event) throws IOException {
+		LMS_Main.changeScene("view/ReturnBooks.fxml");
 	}
 }

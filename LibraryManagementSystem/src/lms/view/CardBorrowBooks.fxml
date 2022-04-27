@@ -83,7 +83,22 @@
             </DropShadow>
          </effect>
       </Button>
-      <Button focusTraversable="false" layoutX="246.0" layoutY="374.0" mnemonicParsing="false" onAction="#btn_confirm_borrow_click" prefHeight="32.0" prefWidth="164.0" text="Confirm Borrow" textFill="#ad6a34">
+      <Button focusTraversable="false" layoutX="154.0" layoutY="372.0" mnemonicParsing="false" onAction="#btn_confirm_borrow_click" prefHeight="32.0" prefWidth="164.0" text="Confirm Borrow" textFill="#ad6a34">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6784313917160034" green="0.4156862795352936" blue="0.20392157137393951" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button focusTraversable="false" layoutX="389.0" layoutY="372.0" mnemonicParsing="false" onAction="#btn_delete_click" prefHeight="28.0" prefWidth="82.0" text="Delete" textFill="#ad6a34">
          <font>
             <Font name="Bauhaus 93" size="18.0" />
          </font>

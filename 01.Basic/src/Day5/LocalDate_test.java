@@ -8,7 +8,7 @@ public class LocalDate_test {
 		// TODO Auto-generated method stub
 		LocalDate date = LocalDate.now();
 		LocalDate date1 = LocalDate.of(2016, 10, 31);
-		LocalDate date2 = LocalDate.parse("2016-10-31");
+		LocalDate date2 = LocalDate.parse("2023-11-02");
 		System.out.println(date1);
 		System.out.println(date2);
 		System.out.println("Current: " + date);
@@ -27,6 +27,7 @@ public class LocalDate_test {
 		System.out.println(date1.equals(date2));
 		System.out.println("2022 is after 2016: " + date.isAfter(date1));
 		System.out.println("2022 is after 2016: " + date.isBefore(date1));
+		System.out.println("2022 is after 2016: " + date2.getDayOfYear());
 		
 	}
 
